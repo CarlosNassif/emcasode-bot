@@ -16,7 +16,9 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('!emcasode'):
+    if message.content.startswith('!emcasode') or message.content == '!ecd':
+        await message.channel.send('Em caso de investigação policial, eu oficialmente declaro que não tenho envolvimento com este grupo e não sei como estou no mesmo, provavelmente fui inserido por terceiros, declaro que estou disposto a colaborar com as investigações e estou disposto a me apresentar a depoimento se necessário, declaro que sou completamente inocente e não tenho envolvimento nenhum com este caso mostrado neste post específico.')
+    if message.content == '!ecdi':
         opcao = random.randint(0, 12)
         if opcao == 0:
             await message.channel.send('Em caso de investigação policial, eu oficialmente declaro que não tenho envolvimento com este grupo e não sei como estou no mesmo, provavelmente fui inserido por terceiros, declaro que estou disposto a colaborar com as investigações e estou disposto a me apresentar a depoimento se necessário, declaro que sou completamente inocente e não tenho envolvimento nenhum com este caso mostrado neste post específico.')
@@ -63,8 +65,9 @@ async def on_message(message):
     if message.content.startswith('!help'):
         await message.channel.send("""
 ```
-!emcasode - chama o texto que deve ser usado se a call ta meio SUS
-!admcorno - n sei nao, testa ai
+!emcasode ou !ecd - chama o texto que deve ser usado se a call ta meio SUS
+!ecdi             - mesma coisa que o de cima, so que pro mundo todo ficar sabendo
+!admcorno         - n sei nao, testa ai
 ```
         """)
 
