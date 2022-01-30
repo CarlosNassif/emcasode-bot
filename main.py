@@ -69,4 +69,4 @@ async def on_message(message):
         """)
 
 
-client.run(os.environ['TOKEN'])
+client.run(os.getenv('TOKEN'))
